@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        
+        {
+            "command": "npm start",
+            "name": "Run npm start",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        find . -type f -not -path "./node_modules/*" -not -path "./.git/*" \( -name "*.js" -o -name "*.ts" -o -name "*.sql" -o -name "*.json" -o -name "*.md" \) -exec sh -c 'echo "=== $1 ==="; cat "$1"' _ {} \;
+
+
+
+
+    ]
+}
